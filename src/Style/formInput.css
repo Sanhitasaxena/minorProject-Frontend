@@ -3,19 +3,25 @@ body{
     padding: 0;
     font-family: 'Oswald', sans-serif;
     position: relative;
-    background: #ddd6f3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #faaca8, #ddd6f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background: #ddd6f3;  /*fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);  /*Chrome 10-25, Safari 5.1-6*/
+    background: linear-gradient(to right, hsl(0, 57%, 63%) 0%, hsl(300, 41%, 53%) 51%); /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url('../images/bg2.jpg');
+    /* filter: blur(); */
+    /* filter: blur(8px); */
+  /* -webkit-filter: blur(8px); */
     
 }
 .formInput{
-    border: 3px solid black;
+    /* border: 3px solid black; */
     margin: 7px;
     width: 32rem;
+    box-shadow: 10px 18px 30px rgb(107, 4, 4);
+    background-color: #f8cac8;
 }
 h1{
     margin-left: 8px;
+    text-align: center;
 }
 .flex{
     display: flex;
@@ -26,12 +32,24 @@ p{
 }
 input{
     height: 2rem;
-    width: 14rem;
+    width: 16rem;
     margin-top: 15px;
     display: flex;
     justify-content: left;
     outline: none;
-    border-color: darksalmon;
+    /* border-color: darksalmon; */
+    border: none;
+    border-radius: 60px;
+    padding-left: 2.2px;
+    padding-right: 5px;
+    text-align: center;
+    color: black;
+    box-shadow: 7px 12px 20px rgb(175, 76, 76);
+
+    
+}
+input:focus{
+    /* background-color: #d64139; */
 }
 
 .flex .one{
@@ -48,4 +66,29 @@ input{
 }
 .main{
     display: flex;
+    justify-content: center;
+    margin-top: 8em;
 }
+
+img{
+    /* border-radius: 50%; */
+    /* text-align: center; */
+   margin-left: 10em;
+   background: transparent;
+   border-radius: 10%;
+
+}
+#para{
+    color: brown;
+    line-height: 10px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    text-align: center;
+}
+#DET{
+    background: linear-gradient(brown, rgb(245, 118, 139));
+    color: white;
+}
+ /* .btn{ */
+     /* margin-right: 50px; */
+ /* } */

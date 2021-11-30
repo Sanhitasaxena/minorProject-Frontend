@@ -3,6 +3,7 @@ import "../Style/formInput.css";
 import TableInfo from "./FormTable";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import logo from "../images/logo.png";
 
 // GetInput function is used to take the input from the user..
 const GetInput = () => {
@@ -124,7 +125,15 @@ const GetInput = () => {
   };
 
   return (
+    <div className="header">
+      <div id="DET">
+        <marquee scrollamount="12"><h2> DAILY_EXPENSE_TRACKER</h2></marquee>
+        
+      </div>
+      <p id="para">Managing and Tracking Expenses made easy!</p>
+    
     <div className="main">
+      
       <div className="formInput">
         <h1>Expense-Tracker</h1>
         <form onSubmit={(e) => Referesh(e)}>
@@ -133,7 +142,7 @@ const GetInput = () => {
             <input
               type="text"
               name="fullName"
-              placeholder="Full name..."
+              placeholder="Your Name..."
               className="one"
               onChange={FormName}
               value={users.fullName}
@@ -144,7 +153,7 @@ const GetInput = () => {
             <input
               type="text"
               name="expName"
-              placeholder="expenses name you made...."
+              placeholder="Expense name you made..."
               className="two"
               onChange={FormName}
               value={users.expName}
@@ -165,7 +174,7 @@ const GetInput = () => {
             <input
               type="text"
               name="amount"
-              placeholder="enter Amount..."
+              placeholder="Enter amount in rupees..."
               className="four"
               onChange={FormName}
               value={users.amount}
@@ -175,9 +184,9 @@ const GetInput = () => {
             <button className="btn" onClick={sendData}>
               Send
             </button>
-            <button className="btn" onClick={receiveData}>
+            {/* <button className="btn" onClick={receiveData}>
               Receive
-            </button>
+            </button> */}
             <button className="btn" onClick={updateUser}>
               Update
             </button>
@@ -185,6 +194,7 @@ const GetInput = () => {
         </form>
       </div>
       <TableInfo user={data} deleteData={deleteData} editUser={editUser} />
+    </div>
     </div>
   );
 };

@@ -9,7 +9,7 @@ const TableInfo = (props) => {
 
   return (
     <div className="container">
-      <table>
+      <table id="formTable">
         <div className="tableHead">
           <thead>
             <tr>
